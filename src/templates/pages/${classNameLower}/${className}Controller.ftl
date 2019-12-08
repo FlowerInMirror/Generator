@@ -25,7 +25,7 @@ import com.camelot.openplatform.common.ExecuteResult;
  * Created on ${date}
  * @author  <a href="mailto: XXXXXX@camelotchina.com">中文名字</a>
  * @version 1.0 
- * Copyright (c) ${year} 北京柯莱特科技有限公司  
+ * Copyright (c) ${year} klt科技有限公司
  */
 @Controller
 @RequestMapping("/sellcenter/${classNameLower}")

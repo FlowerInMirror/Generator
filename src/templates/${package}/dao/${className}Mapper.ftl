@@ -9,7 +9,7 @@ import java.util.List;
  * Created on ${date}
  * @author  <a href="mailto: ${email}">${author}</a>
  * @version 1.0 
- * Copyright (c) 2016 北京柯莱特科技有限公司  
+ * Copyright (c) 2016 klt科技有限公司
  */
 public interface ${className}Mapper extends MyBaseMapper<${className}Model>{
 	

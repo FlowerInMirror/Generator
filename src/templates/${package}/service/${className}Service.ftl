@@ -9,7 +9,7 @@ import ${package}.model.${className}Model;
  * Created on ${date}
  * @author  <a href="mailto: ${email}">${author}</a>
  * @version 1.0 
- * Copyright (c) ${year} 北京柯莱特科技有限公司  
+ * Copyright (c) ${year} klt科技有限公司
  */
 public interface ${className}Service extends BaseService<${className}Model> {
 	

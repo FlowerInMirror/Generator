@@ -140,8 +140,8 @@ public class Generator {
 		root.put("date", sm_date.format(new Date()));
 		root.put("year", sm_year.format(new Date()));
 
-		root.put("author", "王文亮");
-		root.put("email", "wangwenliang@camelotchina.com");
+		root.put("author", "");
+		root.put("email", "");
 
 		String templateDir = this.getClass().getClassLoader().getResource("templates").getPath();
 
@@ -172,41 +172,8 @@ public class Generator {
 	public static void main(String[] args) throws Exception {
 		Generator g = new Generator();
 		Map<String, String> map = new HashMap<>();
-//		map.put("news", "新闻表");
-//		map.put("news_class", "新闻分类表");
-//		map.put("news_label", "新闻标签表");
-//		map.put("notice", "公告表");
-//		map.put("notice_type", "公告类别表");
-//		map.put("projectdata", "项目数据表");
-//		map.put("apply", "申请表");
-//		map.put("banner", "轮播图表");
-//		map.put("faqs", "常见问题表");
-//		map.put("leave_message", "留言表");
-//		map.put("mail_template", "邮件模板表");
-//		map.put("message_template", "短信模板表");
-//		map.put("user", "用户表");
 
-//		map.put("academic_cooperation", "雅典娜计划申请表");
-//		map.put("forum_elite","精英论坛");
-//		map.put("laboratory","联合实验室");
-//		map.put("national_research_project","国家大型科技项目");
-//		map.put("theme_achievements","成果展示管理");
-//		map.put("theme_science","科技项目管理");
-//		map.put("province", "省份信息表");
-//		map.put("school", "学校表");
-//		map.put("dictionary", "字典表");
-//		map.put("exception_log", "异常信息表");
-//		map.put("function_table", "扩充功能表");
-//		map.put("t_bscard_apply_card", "名片申请表");
-//		map.put("t_bscard_commpany_address", "公司地址表");
-//		map.put("t_bscard_commpany_name", "公司名称表");
-//		map.put("t_bscard_dictionary", "字典表");
-//		map.put("t_bscard_export_record", "导出记录表");
-//		map.put("t_bscard_harvest_address", "收获地址表");
-//		map.put("t_bscard_organization", "公司主体表");
-//		map.put("t_bscard_template", "名片模板表");
-//		map.put("t_bscard_user", "用户表");
-		map.put("t_dictionary", "字典表");
+		map.put("country", "国家");
 		
 
 

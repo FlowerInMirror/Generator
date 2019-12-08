@@ -13,7 +13,7 @@ import ${package}.service.${className}Service;
  * Created on ${date}
  * @author  <a href="mailto: ${email}">${author}</a>
  * @version 1.0 
- * Copyright (c) ${year} 北京柯莱特科技有限公司  
+ * Copyright (c) ${year} klt科技有限公司
  */
 @Service("${classNameLower}Service")
 public class ${className}ServiceImpl extends BaseServiceImpl<${className}Model,${className}Mapper> implements ${className}Service {
