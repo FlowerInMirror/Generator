@@ -13,7 +13,7 @@
 	<!--基本字段列表-->
     <sql id="Base_Column_List">
         <#list table.columns as column>
-        ${column.dbName},
+        ${column.dbName}<#if column.end>,</#if>
         </#list>
     </sql>
 	

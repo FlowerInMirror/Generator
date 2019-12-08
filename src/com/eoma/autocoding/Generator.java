@@ -49,6 +49,7 @@ public class Generator {
 		DatabaseMetaData dmd = conn.getMetaData();
 
 		ResultSet rs = dmd.getColumns(catalog, schema, tableName, column);
+
 		List<Column> columns = new ArrayList<Column>();
 		while (rs.next()) {
 			Column c = new Column();
@@ -71,7 +72,8 @@ public class Generator {
 
 			String dbType = rs.getString("TYPE_NAME");
 
-			int columnSize = rs.getInt("COLUMN_SIZE");
+			int column_size = rs.getInt("COLUMN_SIZE");
+			int columnSize = column_size;
 			if(dbType.equals("TINYINT")&&columnSize>1){
 				c.setType("Integer");
 			}else if(dbType.equals("TINYINT")&&columnSize==1){
@@ -81,12 +83,12 @@ public class Generator {
 				c.setType(type == null ? "String" : type);
 			}
 			c.setDbType(dbType);
-			c.setLength(rs.getInt("COLUMN_SIZE"));
+			c.setLength(column_size);
 			c.setDecimalDigits(rs.getInt("DECIMAL_DIGITS"));
 			c.setNullable(rs.getBoolean("NULLABLE"));
-            if (!rs.next()) {
-                c.setEnd(false);
-            }
+			if (rs.isLast()) {
+				c.setEnd(false);
+			}
 			columns.add(c);
 		}
 
