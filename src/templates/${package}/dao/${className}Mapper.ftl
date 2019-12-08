@@ -11,6 +11,6 @@ import java.util.List;
  * @version 1.0 
  * Copyright (c) 2016 klt科技有限公司
  */
-public interface ${className}Mapper extends MyBaseMapper<${className}Model>{
+public interface ${className}Mapper extends MyBaseMapper<${className}>{
 	
 }

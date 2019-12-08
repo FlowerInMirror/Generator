@@ -16,5 +16,56 @@
         ${column.dbName}<#if column.end>,</#if>
         </#list>
     </sql>
+
+	<insert id="insert">
+	INSERT ${table.dbName}
+	(
+		<#list table.columns as column>
+		${column.dbName}<#if column.end>,</#if>
+		</#list>
+	)
+	VALUES
+	(
+		<#list table.columns as column>
+		${column.name}<#if column.end>,</#if>
+		</#list>
+	)
+	</insert>
+	<insert id="insert">
+	<foreach collection="records" item="item" open="(" separator="," close=")">
+	INSERT ${table.dbName}
+	(
+	<#list table.columns as column>
+	${column.dbName}<#if column.end>,</#if>
+	</#list>
+	)
+	VALUES
+	(
+	<#list table.columns as column>
+	item.${column.name}<#if column.end>,</#if>
+	</#list>
+	);
+	</foreach>
+	</insert>
+	<update id="updateByPrimaryKeySelective">
+	UPDATE ${table.dbName}
+	<set>
+		<#list table.columns as column>
+		<if test="${column.name} != null">${column.dbName} = '#'{${column.name}}</if>
+		</#list>
+	</set>
+	WHERE id = '#'{id}
+	</update>
+	<update id="updateByPrimaryKeySelective">
+	<foreach collection="records" item="item" open="(" separator="," close=")">
+	UPDATE ${table.dbName}
+	<set>
+		<#list table.columns as column>
+		<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}}</if>
+	</#list>
+	</set>
+	WHERE id = '#'{id}
+	</foreach>
+	</update>
 	
 </mapper>
