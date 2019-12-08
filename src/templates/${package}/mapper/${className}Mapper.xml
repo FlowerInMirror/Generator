@@ -6,7 +6,7 @@
 	<!-- 返回值映射map -->
 	<resultMap id="${classNameLower}Mapper" type="${package}.model.${className}">
 		<#list table.columns as column>
-			<result property="${column.name}" column="${column.dbName}" />
+		<result property="${column.name}" column="${column.dbName}" />
 		</#list>
 	</resultMap>
 	
@@ -18,54 +18,69 @@
     </sql>
 
 	<insert id="insert">
-	INSERT ${table.dbName}
-	(
+		INSERT ${table.dbName}
+		(
 		<#list table.columns as column>
 		${column.dbName}<#if column.end>,</#if>
 		</#list>
-	)
-	VALUES
-	(
+		)
+		VALUES
+		(
 		<#list table.columns as column>
 		${column.name}<#if column.end>,</#if>
 		</#list>
-	)
+		)
 	</insert>
 	<insert id="insert">
-	<foreach collection="records" item="item" open="(" separator="," close=")">
-	INSERT ${table.dbName}
-	(
-	<#list table.columns as column>
-	${column.dbName}<#if column.end>,</#if>
-	</#list>
-	)
-	VALUES
-	(
-	<#list table.columns as column>
-	item.${column.name}<#if column.end>,</#if>
-	</#list>
-	);
-	</foreach>
+		<foreach collection="records" item="item" open="(" separator="," close=")">
+		INSERT ${table.dbName}
+		(
+		<#list table.columns as column>
+		${column.dbName}<#if column.end>,</#if>
+		</#list>
+		)
+		VALUES
+		(
+		<#list table.columns as column>
+		item.${column.name}<#if column.end>,</#if>
+		</#list>
+		);
+		</foreach>
 	</insert>
 	<update id="updateByPrimaryKeySelective">
-	UPDATE ${table.dbName}
-	<set>
+		UPDATE ${table.dbName}
+		<set>
 		<#list table.columns as column>
 		<if test="${column.name} != null">${column.dbName} = '#'{${column.name}}</if>
 		</#list>
-	</set>
-	WHERE id = '#'{id}
+		</set>
+		WHERE id = '#'{id}
 	</update>
 	<update id="updateByPrimaryKeySelective">
 	<foreach collection="records" item="item" open="(" separator="," close=")">
-	UPDATE ${table.dbName}
-	<set>
+		UPDATE ${table.dbName}
+		<set>
 		<#list table.columns as column>
 		<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}}</if>
-	</#list>
-	</set>
-	WHERE id = '#'{id}
+		</#list>
+		</set>
+		WHERE id = '#'{id}
 	</foreach>
 	</update>
+	<select id="selectByPrimaryKey" resultMap="${classNameLower}Mapper">
+		SELECT
+		<include refid="Base_Column_List"/>
+		FROM ${table.dbName}
+		WHERE id = '#'{id}
+	</select>
+	<select id="selectByIdList" resultMap="${classNameLower}Mapper">
+		SELECT
+		<include refid="Base_Column_List"/>
+		FROM ${table.dbName}
+		WHERE id IN
+		<foreach collection="records" item="item" open="(" separator="," close=")">
+		'#'{item.id}
+		</foreach>
+	</select>
 	
 </mapper>
