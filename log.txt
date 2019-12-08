@@ -1,0 +1,160 @@
+ERROR 2018-09-21 15:31 freemarker.runtime>>Error executing FreeMarker template (_Log4JLoggerFactory.java:60) 
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> column.keyFlag  [in template "${className}Model.ftl" at line 25, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if column.keyFlag  [in template "${className}Model.ftl" at line 25, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:108)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:60)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:134)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:117)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:108)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:278)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:157)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:501)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:67)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.Environment.process(Environment.java:235)
+	at freemarker.template.Template.process(Template.java:262)
+	at com.eoma.autocoding.Generator.gen(Generator.java:158)
+	at com.eoma.autocoding.Generator.main(Generator.java:207)
+ERROR 2018-09-21 15:35 freemarker.runtime>>Error executing FreeMarker template (_Log4JLoggerFactory.java:60) 
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> column.keyFlag  [in template "${className}Model.ftl" at line 25, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if column.keyFlag  [in template "${className}Model.ftl" at line 25, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:108)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:60)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:134)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:117)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:108)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:278)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:157)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:501)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:67)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.Environment.process(Environment.java:235)
+	at freemarker.template.Template.process(Template.java:262)
+	at com.eoma.autocoding.Generator.gen(Generator.java:158)
+	at com.eoma.autocoding.Generator.main(Generator.java:207)
+ERROR 2018-09-21 15:39 freemarker.runtime>>Error executing FreeMarker template (_Log4JLoggerFactory.java:60) 
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> column.convert  [in template "${className}Model.ftl" at line 28, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if column.convert  [in template "${className}Model.ftl" at line 28, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:108)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:60)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:134)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:117)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:108)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:278)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:157)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:501)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:67)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.Environment.process(Environment.java:235)
+	at freemarker.template.Template.process(Template.java:262)
+	at com.eoma.autocoding.Generator.gen(Generator.java:158)
+	at com.eoma.autocoding.Generator.main(Generator.java:207)
+ERROR 2018-09-21 15:44 freemarker.runtime>>Error executing FreeMarker template (_Log4JLoggerFactory.java:60) 
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> column.convert  [in template "${className}Model.ftl" at line 28, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if column.convert  [in template "${className}Model.ftl" at line 28, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:108)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:60)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:134)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:117)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:108)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:278)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:157)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:501)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:67)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.MixedContent.accept(MixedContent.java:57)
+	at freemarker.core.Environment.visit(Environment.java:257)
+	at freemarker.core.Environment.process(Environment.java:235)
+	at freemarker.template.Template.process(Template.java:262)
+	at com.eoma.autocoding.Generator.gen(Generator.java:162)
+	at com.eoma.autocoding.Generator.main(Generator.java:211)
