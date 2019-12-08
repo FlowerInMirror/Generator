@@ -84,6 +84,9 @@ public class Generator {
 			c.setLength(rs.getInt("COLUMN_SIZE"));
 			c.setDecimalDigits(rs.getInt("DECIMAL_DIGITS"));
 			c.setNullable(rs.getBoolean("NULLABLE"));
+            if (!rs.next()) {
+                c.setEnd(false);
+            }
 			columns.add(c);
 		}
 

@@ -9,6 +9,7 @@ public class Column {
 	private String type;
 	private String dbType;
 	private Integer length;
+	private Boolean end = true;
 	private Boolean nullable;
 	private Integer decimalDigits;
 	
@@ -57,6 +58,15 @@ public class Column {
 	public void setLength(Integer length) {
 		this.length = length;
 	}
+
+	public Boolean getEnd() {
+		return end;
+	}
+
+	public void setEnd(Boolean end) {
+		this.end = end;
+	}
+
 	public Boolean getNullable() {
 		return nullable;
 	}

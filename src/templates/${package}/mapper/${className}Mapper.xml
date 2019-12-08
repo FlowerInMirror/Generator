@@ -4,7 +4,7 @@
 
 <mapper namespace="${package}.dao.mapper.${className}Mapper">
 	<!-- 返回值映射map -->
-	<resultMap id="${classNameLower}Mapper" type="${package}.model.${className}Model">
+	<resultMap id="${classNameLower}Mapper" type="${package}.model.${className}">
 		<#list table.columns as column>
 			<result property="${column.name}" column="${column.dbName}" />
 		</#list>
