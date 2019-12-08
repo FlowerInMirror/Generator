@@ -176,8 +176,14 @@ public class Generator {
 		Generator g = new Generator();
 		Map<String, String> map = new HashMap<>();
 
-		map.put("country", "国家");
-		
+		// basecenter
+		map.put("country", "国家代号与区号");
+		map.put("region", "省市县");
+		map.put("sys_menu", "菜单表");
+		map.put("sys_role", "角色表");
+		map.put("sys_role_menu", "角色-菜单表");
+		map.put("sys_role_user", "角色-用户表");
+
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();
