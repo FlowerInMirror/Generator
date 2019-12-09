@@ -108,7 +108,8 @@
 		SELECT
 		<include refid="Base_Column_List"/>
 		FROM ${table.dbName}
-		WHERE id IN
+		WHERE yn = 1
+		AND id IN
 		<foreach collection="records" item="item" open="(" separator="," close=")">
 			'#'{item.id}
 		</foreach>
