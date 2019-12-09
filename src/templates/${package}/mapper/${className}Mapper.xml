@@ -73,20 +73,24 @@
 		WHERE id = '#'{id}
 	</foreach>
 	</update>
+	<update id="delete">
+		UPDATE ${table.dbName} SET yn = 0
+		<include refid="where_fragment"/>
+	</update>
+	<update id="deleteByPrimaryKey">
+		UPDATE ${table.dbName} SET yn = 0 WHERE id = '#'{id}
+	</update>
 	<select id="selectByPrimaryKey" resultMap="${classNameLower}Mapper">
 		SELECT
 		<include refid="Base_Column_List"/>
 		FROM ${table.dbName}
 		WHERE id = '#'{id}
 	</select>
-	<select id="selectByIdList" resultMap="${classNameLower}Mapper">
+	<select id="one" resultMap="${classNameLower}Mapper">
 		SELECT
 		<include refid="Base_Column_List"/>
 		FROM ${table.dbName}
-		WHERE id IN
-		<foreach collection="records" item="item" open="(" separator="," close=")">
-		'#'{item.id}
-		</foreach>
+		<include refid="where_fragment"/>
 	</select>
 	<select id="all" resultMap="${classNameLower}Mapper">
 		SELECT
@@ -94,14 +98,29 @@
 		FROM ${table.dbName}
 		WHERE yn = 1
 	</select>
-	<select id="selectPage">
+	<select id="select" resultMap="${classNameLower}Mapper">
+		SELECT
+		<include refid="Base_Column_List"/>
+		FROM ${table.dbName}
+		<include refid="where_fragment"/>
+	</select>
+	<select id="selectByIds" resultMap="${classNameLower}Mapper">
+		SELECT
+		<include refid="Base_Column_List"/>
+		FROM ${table.dbName}
+		WHERE id IN
+		<foreach collection="records" item="item" open="(" separator="," close=")">
+			'#'{item.id}
+		</foreach>
+	</select>
+	<select id="selectPage" resultMap="${classNameLower}Mapper">
 		SELECT
 		<include refid="Base_Column_List"/>
 		FROM ${table.dbName}
 		<include refid="where_fragment"/>
 		<if test="pageNum != null and pageSize != null"> limit '#'{pageNum},'#'{pageSize}</if>
 	</select>
-	<select id="selectCount">
+	<select id="selectCount" resultType="java.lang.Integer">
 		SELECT
 			COUNT(1)
 		FROM ${table.dbName}
