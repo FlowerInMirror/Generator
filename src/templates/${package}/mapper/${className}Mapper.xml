@@ -2,9 +2,9 @@
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="${package}.dao.mapper.${className}Mapper">
+<mapper namespace="${package}.mapper.${className}Mapper">
 	<!-- 返回值映射map -->
-	<resultMap id="${classNameLower}Mapper" type="${package}.model.${className}">
+	<resultMap id="${classNameLower}Mapper" type="${package}.pojo.${className}">
 		<#list table.columns as column>
 		<result property="${column.name}" column="${column.dbName}" />
 		</#list>
@@ -18,8 +18,8 @@
     </sql>
 	<sql id="where_fragment">
 	    <where>
-			<if test="id != null">id = '#'{id}</if>
-			<if test="yn != null">yn = '#'{yn}</if>
+			<if test="record.id != null">id = '#'{record.id}</if>
+			<if test="record.yn != null">yn = '#'{record.yn}</if>
 		</where>
 	</sql>
 
