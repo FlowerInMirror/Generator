@@ -88,6 +88,12 @@
 		'#'{item.id}
 		</foreach>
 	</select>
+	<select id="all" resultMap="${classNameLower}Mapper">
+		SELECT
+		<include refid="Base_Column_List"/>
+		FROM ${table.dbName}
+		WHERE yn = 1
+	</select>
 	<select id="selectPage">
 		SELECT
 		<include refid="Base_Column_List"/>
