@@ -16,6 +16,12 @@
         ${column.dbName}<#if column.end>,</#if>
         </#list>
     </sql>
+	<sql id="where_fragment">
+	    <where>
+			<if test="id != null">id = '#'{id}</if>
+			<if test="yn != null">yn = '#'{yn}</if>
+		</where>
+	</sql>
 
 	<insert id="insert">
 		INSERT ${table.dbName}
@@ -81,6 +87,19 @@
 		<foreach collection="records" item="item" open="(" separator="," close=")">
 		'#'{item.id}
 		</foreach>
+	</select>
+	<select id="selectPage">
+		SELECT
+		<include refid="Base_Column_List"/>
+		FROM ${table.dbName}
+		<include refid="where_fragment"/>
+		<if test="pageNum != null and pageSize != null"> limit '#'{pageNum},'#'{pageSize}</if>
+	</select>
+	<select id="selectCount">
+		SELECT
+			COUNT(1)
+		FROM ${table.dbName}
+		<include refid="where_fragment"/>
 	</select>
 	
 </mapper>
