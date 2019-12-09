@@ -18,8 +18,8 @@
     </sql>
 	<sql id="where_fragment">
 	    <where>
-			<if test="record.id != null">id = '#'{record.id}</if>
-			<if test="record.yn != null">yn = '#'{record.yn}</if>
+			<if test="record.id != null">AND id = '#'{record.id},</if>
+			<if test="record.yn != null">AND yn = '#'{record.yn},</if>
 		</where>
 	</sql>
 
