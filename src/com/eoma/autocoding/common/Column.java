@@ -9,6 +9,7 @@ public class Column {
 	private String type;
 	private String dbType;
 	private Integer length;
+	private Boolean isStr = false;
 	private Boolean end = true;
 	private Boolean nullable;
 	private Integer decimalDigits;
@@ -20,6 +21,14 @@ public class Column {
 
 	public void setConvert(boolean convert) {
 		this.convert = convert;
+	}
+
+	public Boolean getStr() {
+		return isStr;
+	}
+
+	public void setStr(Boolean str) {
+		isStr = str;
 	}
 
 	public boolean isKeyFlag() {

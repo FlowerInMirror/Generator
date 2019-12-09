@@ -31,7 +31,7 @@
 		</#list>
 		)
 	</insert>
-	<insert id="insert">
+	<insert id="insertList">
 		<foreach collection="records" item="item" open="(" separator="," close=")">
 		INSERT ${table.dbName}
 		(

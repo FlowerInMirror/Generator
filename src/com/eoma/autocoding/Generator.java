@@ -51,7 +51,7 @@ public class Generator {
 		ResultSet rs = dmd.getColumns(catalog, schema, tableName, column);
 
 		List<Column> columns = new ArrayList<Column>();
-		while (rs.next()) {
+ 		while (rs.next()) {
 			Column c = new Column();
 			
 			c.setLabel(rs.getString("REMARKS"));
@@ -81,6 +81,9 @@ public class Generator {
 			}else{
 				String type = properties.getProperty(dbType);
 				c.setType(type == null ? "String" : type);
+			}
+			if (dbType.equals("VARCHAR") || dbType.equals("TEXT")) {
+				c.setStr(true);
 			}
 			c.setDbType(dbType);
 			c.setLength(column_size);
