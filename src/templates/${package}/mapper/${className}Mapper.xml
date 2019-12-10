@@ -4,14 +4,14 @@
 
 <mapper namespace="${package}.mapper.${className}Mapper">
 	<!-- 返回值映射map -->
-	<resultMap id="${classNameLower}Mapper" type="${package}.pojo.${className}">
+	<resultMap id="base_result_map" type="${package}.pojo.${className}">
 		<#list table.columns as column>
 		<result property="${column.name}" column="${column.dbName}" />
 		</#list>
 	</resultMap>
 	
 	<!--基本字段列表-->
-    <sql id="Base_Column_List">
+    <sql id="base_column_list">
         <#list table.columns as column>
         ${column.dbName}<#if column.end>,</#if>
         </#list>
@@ -80,33 +80,33 @@
 	<update id="deleteByPrimaryKey">
 		UPDATE ${table.dbName} SET yn = 0 WHERE id = '#'{id}
 	</update>
-	<select id="selectByPrimaryKey" resultMap="${classNameLower}Mapper">
+	<select id="selectByPrimaryKey" resultMap="base_result_map">
 		SELECT
-		<include refid="Base_Column_List"/>
+		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		WHERE id = '#'{id}
 	</select>
-	<select id="one" resultMap="${classNameLower}Mapper">
+	<select id="one" resultMap="base_result_map">
 		SELECT
-		<include refid="Base_Column_List"/>
+		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		<include refid="where_fragment"/>
 	</select>
-	<select id="all" resultMap="${classNameLower}Mapper">
+	<select id="all" resultMap="base_result_map">
 		SELECT
-		<include refid="Base_Column_List"/>
+		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		WHERE yn = 1
 	</select>
-	<select id="select" resultMap="${classNameLower}Mapper">
+	<select id="select" resultMap="base_result_map">
 		SELECT
-		<include refid="Base_Column_List"/>
+		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		<include refid="where_fragment"/>
 	</select>
-	<select id="selectByIds" resultMap="${classNameLower}Mapper">
+	<select id="selectByIds" resultMap="base_result_map">
 		SELECT
-		<include refid="Base_Column_List"/>
+		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		WHERE yn = 1
 		AND id IN
@@ -114,9 +114,9 @@
 			'#'{item.id}
 		</foreach>
 	</select>
-	<select id="selectPage" resultMap="${classNameLower}Mapper">
+	<select id="selectPage" resultMap="base_result_map">
 		SELECT
-		<include refid="Base_Column_List"/>
+		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		<include refid="where_fragment"/>
 		<if test="pageNum != null and pageSize != null"> limit '#'{pageNum},'#'{pageSize}</if>
