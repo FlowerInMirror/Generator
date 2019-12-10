@@ -62,16 +62,16 @@
 		</set>
 		WHERE id = '#'{id}
 	</update>
-	<update id="updateByPrimaryKeySelective">
-	<foreach collection="records" item="item" open="(" separator="," close=")">
-		UPDATE ${table.dbName}
-		<set>
-		<#list table.columns as column>
-		<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}}</if>
-		</#list>
-		</set>
-		WHERE id = '#'{id}
-	</foreach>
+	<update id="updateBatchByPrimaryKeySelective">
+		<foreach collection="records" item="item" open="(" separator="," close=")">
+			UPDATE ${table.dbName}
+			<set>
+			<#list table.columns as column>
+			<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}}</if>
+			</#list>
+			</set>
+			WHERE id = '#'{id}
+		</foreach>
 	</update>
 	<update id="delete">
 		UPDATE ${table.dbName} SET yn = 0
