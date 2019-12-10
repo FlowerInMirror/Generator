@@ -18,8 +18,9 @@
     </sql>
 	<sql id="where_fragment">
 	    <where>
-			<if test="record.id != null">AND id = '#'{record.id},</if>
-			<if test="record.yn != null">AND yn = '#'{record.yn},</if>
+			<#list table.columns as column>
+			<if test="record.${column.name} != null">AND ${column.dbName} = '#'{record.${column.name}}</if>
+			</#list>
 		</where>
 	</sql>
 
@@ -70,7 +71,7 @@
 			<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}}</if>
 			</#list>
 			</set>
-			WHERE id = '#'{id}
+			WHERE id = '#'{item.id}
 		</foreach>
 	</update>
 	<update id="delete">
@@ -80,6 +81,23 @@
 	<update id="deleteByPrimaryKey">
 		UPDATE ${table.dbName} SET yn = 0 WHERE id = '#'{id}
 	</update>
+	<update id="deleteBatchByPrimaryKey">
+		<foreach collection="records" item="item">
+		UPDATE ${table.dbName} SET yn = 0 WHERE id = '#'{item};
+		</foreach>
+	</update>
+	<delete id="physicalDelete">
+		DELETE FROM ${table.dbName}
+		<include refid="where_fragment"/>
+	</delete>
+	<delete id="physicalDeleteByPrimaryKey">
+		DELETE FROM ${table.dbName} WHERE id = '#'{id}
+	</delete>
+	<delete id="physicalDeleteBatchByPrimaryKey">
+		<foreach collection="records" item="item">
+			DELETE FROM ${table.dbName} WHERE id = '#'{item};
+		</foreach>
+	</delete>
 	<select id="selectByPrimaryKey" resultMap="base_result_map">
 		SELECT
 		<include refid="base_column_list"/>
@@ -110,8 +128,8 @@
 		FROM ${table.dbName}
 		WHERE yn = 1
 		AND id IN
-		<foreach collection="records" item="item" open="(" separator="," close=")">
-			'#'{item.id}
+		<foreach collection="ids" item="item" open="(" separator="," close=")">
+			'#'{item}
 		</foreach>
 	</select>
 	<select id="selectPage" resultMap="base_result_map">
@@ -119,7 +137,7 @@
 		<include refid="base_column_list"/>
 		FROM ${table.dbName}
 		<include refid="where_fragment"/>
-		<if test="pageNum != null and pageSize != null"> limit '#'{pageNum},'#'{pageSize}</if>
+		<if test="pageNum != null and pageSize != null"> LIMIT '#'{pageNum},'#'{pageSize}</if>
 	</select>
 	<select id="selectCount" resultType="java.lang.Integer">
 		SELECT
