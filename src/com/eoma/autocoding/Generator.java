@@ -182,12 +182,29 @@ public class Generator {
 		Map<String, String> map = new HashMap<>();
 
 		// basecenter
-		map.put("country", "国家代号与区号");
-		map.put("region", "省市县");
-		map.put("sys_menu", "菜单表");
-		map.put("sys_role", "角色表");
-		map.put("sys_role_menu", "角色-菜单表");
-		map.put("sys_role_user", "角色-用户表");
+//		map.put("country", "国家代号与区号");
+//		map.put("region", "省市县");
+//		map.put("sys_menu", "菜单表");
+//		map.put("sys_role", "角色表");
+//		map.put("sys_role_menu", "角色-菜单表");
+//		map.put("sys_role_user", "角色-用户表");
+
+		// goodscenter
+		map.put("item", "商品");
+		map.put("item_brand", "品牌");
+		map.put("item_category", "商品类目");
+		map.put("item_category_brand", "商品分类品牌关联关系");
+		map.put("item_evaluation", "商品评价");
+		map.put("item_favourite", "商品收藏");
+		map.put("item_sales_volume", "商品销量");
+		map.put("item_spec", "规格参数组下的参数名");
+		map.put("item_spec_group", "规格参数的分组表，每个商品分类下有多个规格参数组");
+		map.put("item_spec_value", "商品规格值");
+		map.put("sku", "商品sku");
+		map.put("stock_info", "库存信息表");
+		map.put("stock_order", "订单库存表");
+		map.put("stock_out_detail", "库存出管详情表");
+		map.put("stock_out_mag", "库存出管表");
 
 
 
