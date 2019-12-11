@@ -207,10 +207,17 @@ public class Generator {
 //		map.put("stock_out_mag", "库存出管表");
 
 		// homecenter
-		map.put("mall_banner", "轮播图");
-		map.put("mall_floor", "商城首页楼层");
-		map.put("mall_floor_item", "楼层推荐为商品");
-		map.put("mall_floor_nav", "商城首页楼层导航");
+//		map.put("mall_banner", "轮播图");
+//		map.put("mall_floor", "商城首页楼层");
+//		map.put("mall_floor_item", "楼层推荐为商品");
+//		map.put("mall_floor_nav", "商城首页楼层导航");
+
+		// tradecenter
+		map.put("order_item", "订单商品表");
+		map.put("order_item_discount", "订单商品活动");
+		map.put("orders", "订单");
+		map.put("pay_log", "");
+		map.put("shop_freight_template", "运费模板,商品所在地到配送地址所在地区");
 
 
 
