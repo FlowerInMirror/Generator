@@ -213,12 +213,19 @@ public class Generator {
 //		map.put("mall_floor_nav", "商城首页楼层导航");
 
 		// tradecenter
-		map.put("order_item", "订单商品表");
-		map.put("order_item_discount", "订单商品活动");
-		map.put("orders", "订单");
-		map.put("pay_log", "");
-		map.put("shop_freight_template", "运费模板,商品所在地到配送地址所在地区");
+//		map.put("order_item", "订单商品表");
+//		map.put("order_item_discount", "订单商品活动");
+//		map.put("orders", "订单");
+//		map.put("pay_log", "");
+//		map.put("shop_freight_template", "运费模板,商品所在地到配送地址所在地区");
 
+		// promotioncenter
+		map.put("coupon", "优惠券");
+		map.put("coupon_user", "用户使用优惠券");
+		map.put("promotion", "促销活动");
+		map.put("promotion_item", "活动商品");
+		map.put("user_credit", "用户积分");
+		map.put("user_credit_log", "用户积分来源与使用");
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();
