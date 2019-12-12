@@ -220,12 +220,27 @@ public class Generator {
 //		map.put("shop_freight_template", "运费模板,商品所在地到配送地址所在地区");
 
 		// promotioncenter
-		map.put("coupon", "优惠券");
-		map.put("coupon_user", "用户使用优惠券");
-		map.put("promotion", "促销活动");
-		map.put("promotion_item", "活动商品");
-		map.put("user_credit", "用户积分");
-		map.put("user_credit_log", "用户积分来源与使用");
+//		map.put("coupon", "优惠券");
+//		map.put("coupon_user", "用户使用优惠券");
+//		map.put("promotion", "促销活动");
+//		map.put("promotion_item", "活动商品");
+//		map.put("user_credit", "用户积分");
+//		map.put("user_credit_log", "用户积分来源与使用");
+
+		// storecenter
+		map.put("qq_customer", "腾讯客服");
+		map.put("shop_brand", "店铺经营的类目品牌");
+		map.put("shop_category", "店铺商品分类");
+		map.put("shop_favourite", "收藏店铺");
+		map.put("shop_frame", "店铺框架(装修)");
+		map.put("shop_info", "店铺信息");
+		map.put("shop_logistics", "店铺物流");
+		map.put("shop_modify_detail", "店铺修改详情");
+		map.put("shop_modify_info", "店铺修改信息");
+		map.put("shop_sales_volume", "店铺销量");
+		map.put("shop_templates", "店铺使用模板");
+		map.put("shop_widget", "店铺控件(装修)");
+		map.put("shop_widget_sheet", "店铺控件单元数据(装修)");
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();
