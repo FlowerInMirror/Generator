@@ -228,19 +228,26 @@ public class Generator {
 //		map.put("user_credit_log", "用户积分来源与使用");
 
 		// storecenter
-		map.put("qq_customer", "腾讯客服");
-		map.put("shop_brand", "店铺经营的类目品牌");
-		map.put("shop_category", "店铺商品分类");
-		map.put("shop_favourite", "收藏店铺");
-		map.put("shop_frame", "店铺框架(装修)");
-		map.put("shop_info", "店铺信息");
-		map.put("shop_logistics", "店铺物流");
-		map.put("shop_modify_detail", "店铺修改详情");
-		map.put("shop_modify_info", "店铺修改信息");
-		map.put("shop_sales_volume", "店铺销量");
-		map.put("shop_templates", "店铺使用模板");
-		map.put("shop_widget", "店铺控件(装修)");
-		map.put("shop_widget_sheet", "店铺控件单元数据(装修)");
+//		map.put("qq_customer", "腾讯客服");
+//		map.put("shop_brand", "店铺经营的类目品牌");
+//		map.put("shop_category", "店铺商品分类");
+//		map.put("shop_favourite", "收藏店铺");
+//		map.put("shop_frame", "店铺框架(装修)");
+//		map.put("shop_info", "店铺信息");
+//		map.put("shop_logistics", "店铺物流");
+//		map.put("shop_modify_detail", "店铺修改详情");
+//		map.put("shop_modify_info", "店铺修改信息");
+//		map.put("shop_sales_volume", "店铺销量");
+//		map.put("shop_templates", "店铺使用模板");
+//		map.put("shop_widget", "店铺控件(装修)");
+//		map.put("shop_widget_sheet", "店铺控件单元数据(装修)");
+
+        // aftercenter
+        map.put("after_sale", "售后单");
+        map.put("complaint", "买家投诉");
+        map.put("refund", "退款单");
+        map.put("return_express", "售后退款退货-换货");
+        map.put("return_item", "售后退货");
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();
