@@ -39,7 +39,7 @@
 		)
 	</insert>
 	<insert id="insertList">
-		<foreach collection="records" item="item" open="(" separator="," close=")">
+		<foreach collection="records" item="item">
 		INSERT ${table.dbName}
 		(
 		<#list table.columns as column>
@@ -64,7 +64,7 @@
 		WHERE id = '#'{id}
 	</update>
 	<update id="updateBatchByPrimaryKeySelective">
-		<foreach collection="records" item="item" open="(" separator="," close=")">
+		<foreach collection="records" item="item">
 			UPDATE ${table.dbName}
 			<set>
 			<#list table.columns as column>
