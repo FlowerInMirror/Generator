@@ -58,7 +58,7 @@
 		UPDATE ${table.dbName}
 		<set>
 		<#list table.columns as column>
-		<if test="${column.name} != null">${column.dbName} = '#'{${column.name}}</if>
+		<if test="${column.name} != null">${column.dbName} = '#'{${column.name}},</if>
 		</#list>
 		</set>
 		WHERE id = '#'{id}
@@ -68,10 +68,10 @@
 			UPDATE ${table.dbName}
 			<set>
 			<#list table.columns as column>
-			<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}}</if>
+			<if test="item.${column.name} != null">${column.dbName} = '#'{item.${column.name}},</if>
 			</#list>
 			</set>
-			WHERE id = '#'{item.id}
+			WHERE id = '#'{item.id};
 		</foreach>
 	</update>
 	<update id="delete">
