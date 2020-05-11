@@ -243,31 +243,38 @@ public class Generator {
 //		map.put("shop_widget_sheet", "店铺控件单元数据(装修)");
 
 		// usercenter
-		map.put("buyer", "会员表(买家)");
-		map.put("buyer_credit_log", "买家用户积分记录");
-		map.put("buyer_receive_address", "买家收货地址");
-		map.put("field_certification", "认证信息");
-		map.put("field_identification_audit", "实地认证审核表");
-		map.put("field_identification_picture", "实地认证图片表");
-		map.put("seller", "卖家辅助信息");
-		map.put("seller_audit", "用户审核表");
-		map.put("seller_audit_log", "用户审核表记录");
-		map.put("seller_bank_info", "用户-银行账户信息(针对用户资质)");
-		map.put("seller_business_licence", "卖家-营业执照(针对用户资质)");
-		map.put("seller_contract_audit", "用户合同审核表");
-		map.put("seller_operate_info", "用户-运营信息(针对用户资质)");
-		map.put("seller_organization", "用户-组织机构(针对用户资质)");
-		map.put("sys_user", "平台系统用户");
-		map.put("user", "用户中心表（用户基本信息）");
-		map.put("user_modify_detail", "用户信息修改详情");
-		map.put("user_modify_info", "用户修改信息");
+//		map.put("buyer", "会员表(买家)");
+//		map.put("buyer_credit_log", "买家用户积分记录");
+//		map.put("buyer_receive_address", "买家收货地址");
+//		map.put("field_certification", "认证信息");
+//		map.put("field_identification_audit", "实地认证审核表");
+//		map.put("field_identification_picture", "实地认证图片表");
+//		map.put("seller", "卖家辅助信息");
+//		map.put("seller_audit", "用户审核表");
+//		map.put("seller_audit_log", "用户审核表记录");
+//		map.put("seller_bank_info", "用户-银行账户信息(针对用户资质)");
+//		map.put("seller_business_licence", "卖家-营业执照(针对用户资质)");
+//		map.put("seller_contract_audit", "用户合同审核表");
+//		map.put("seller_operate_info", "用户-运营信息(针对用户资质)");
+//		map.put("seller_organization", "用户-组织机构(针对用户资质)");
+//		map.put("sys_user", "平台系统用户");
+//		map.put("user", "用户中心表（用户基本信息）");
+//		map.put("user_modify_detail", "用户信息修改详情");
+//		map.put("user_modify_info", "用户修改信息");
 
         // aftercenter
 //        map.put("after_sale", "售后单");
 //        map.put("complaint", "买家投诉");
 //        map.put("refund", "退款单");
 //        map.put("return_express", "售后退款退货-换货");
-//        map.put("return_item", "售后退货");
+//        map.put("return_item", "售后
+
+		// mallsetcenter
+		map.put("floor_img", "楼层图片");
+		map.put("floor_item", "楼层商品");
+		map.put("floor_tab", "楼层页签");
+		map.put("mall_floor", "商城页面模版中楼层信息");
+		map.put("mall_page", "商城页面模版");
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();
