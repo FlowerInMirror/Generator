@@ -5,11 +5,6 @@ import org.junit.Test;
 
 import javax.annotation.Resource;
 
-import ${package}.model.${className}Model;
-import ${package}.test.common.BaseTestCase;
-import ${package}.service.${className}MicroService;
-import com.camelot.openplatform.common.bean.Pager;
-
 /** 
  * <p>Description: [${table.tableDesc} 单元测试类]</p>
  * Created on ${date}
