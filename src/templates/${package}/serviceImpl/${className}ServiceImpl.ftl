@@ -1,11 +1,9 @@
 package ${package}.service.impl;
 
-import java.util.Map;
-import java.util.List;
-import javax.annotation.Resource;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
-import ${package}.dao.${className}Dao;
-import ${package}.model.${className}Model;
+import ${package}.dao.${className}Mapper;
+import ${package}.pojo.${className};
 import ${package}.service.${className}Service;
 
 /** 
@@ -16,14 +14,6 @@ import ${package}.service.${className}Service;
  * Copyright (c) ${year} klt科技有限公司
  */
 @Service("${classNameLower}Service")
-public class ${className}ServiceImpl extends BaseServiceImpl<${className}Model,${className}Mapper> implements ${className}Service {
-	
-	/**
-	 * <p>Discription:[${table.tableDesc}Mapper]</p>
-	 */	
-	@Resource
-	private ${className}Mapper ${classNameLower}Mapper;
-	
-	
+public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${className}> implements ${className}Service {
 
 }

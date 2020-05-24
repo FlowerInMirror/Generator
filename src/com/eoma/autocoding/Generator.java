@@ -270,11 +270,12 @@ public class Generator {
 //        map.put("return_item", "售后
 
 		// mallsetcenter
-		map.put("floor_img", "楼层图片");
-		map.put("floor_item", "楼层商品");
-		map.put("floor_tab", "楼层页签");
-		map.put("mall_floor", "商城页面模版中楼层信息");
-		map.put("mall_page", "商城页面模版");
+//		map.put("floor_img", "楼层图片");
+//		map.put("floor_item", "楼层商品");
+//		map.put("floor_tab", "楼层页签");
+//		map.put("mall_floor", "商城页面模版中楼层信息");
+//		map.put("mall_page", "商城页面模版");
+		map.put("mall_banner", "商城首页轮播图");
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();

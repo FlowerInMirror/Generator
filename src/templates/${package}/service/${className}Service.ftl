@@ -1,8 +1,7 @@
 package ${package}.service;
 
-import java.util.List;
-import java.util.Map;
-import ${package}.model.${className}Model;
+import com.baomidou.mybatisplus.extension.service.IService;
+import ${package}.pojo.${className};
 
 /**
  * Description: [${table.tableDesc}服务]
@@ -11,8 +10,6 @@ import ${package}.model.${className}Model;
  * @version 1.0 
  * Copyright (c) ${year} klt科技有限公司
  */
-public interface ${className}Service extends BaseService<${className}Model> {
-	
-	
-	
+public interface ${className}Service extends IService<${className}> {
+
 }

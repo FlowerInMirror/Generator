@@ -1,10 +1,10 @@
 package ${package}.pojo;
 
-import javax.persistence.*;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.util.Date;
-import java.util.List;
+
 /** 
  * <p>Description: [${table.tableDesc}pojo]</p>
  * Created on ${date}
@@ -12,8 +12,8 @@ import java.util.List;
  * @version 1.0 
  * Copyright (c) 2016 klt科技有限公司
  */
-@Table(name = "${table.dbName}")
-@ApiModel(value = "${table.tableDesc}",description = "${table.tableDesc}")
+@Data
+@TableName("${table.dbName}")
 public class ${className} {
 
 <#list table.columns as column>
