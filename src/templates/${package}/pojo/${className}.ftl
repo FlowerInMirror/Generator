@@ -20,11 +20,6 @@ public class ${className} {
 	/**
      * ${column.label}
      */
-	<#if column.keyFlag>
-	@Id
-	</#if>
-	<#if column.convert>
-	</#if>
 	private ${column.type} ${column.name};
 </#list>
 
