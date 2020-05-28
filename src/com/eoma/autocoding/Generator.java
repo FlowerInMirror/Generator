@@ -201,10 +201,8 @@ public class Generator {
 //		map.put("item_spec_group", "规格参数的分组表，每个商品分类下有多个规格参数组");
 //		map.put("item_spec_value", "商品规格值");
 //		map.put("sku", "商品sku");
-//		map.put("stock_info", "库存信息表");
-//		map.put("stock_order", "订单库存表");
-//		map.put("stock_out_detail", "库存出管详情表");
-//		map.put("stock_out_mag", "库存出管表");
+//		map.put("stock", "库存信息表");
+		map.put("stock_record", "库存出入库记录/库存流水");
 
 		// homecenter
 //		map.put("mall_banner", "轮播图");
@@ -275,7 +273,7 @@ public class Generator {
 //		map.put("floor_tab", "楼层页签");
 //		map.put("mall_floor", "商城页面模版中楼层信息");
 //		map.put("mall_page", "商城页面模版");
-		map.put("mall_banner", "商城首页轮播图");
+//		map.put("mall_banner", "商城首页轮播图");
 
 
 		Iterator<Entry<String, String>> it = map.entrySet().iterator();

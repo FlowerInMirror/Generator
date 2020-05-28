@@ -2,7 +2,7 @@ package ${package}.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
-import ${package}.dao.${className}Mapper;
+import ${package}.mapper.${className}Mapper;
 import ${package}.pojo.${className};
 import ${package}.service.${className}Service;
 
