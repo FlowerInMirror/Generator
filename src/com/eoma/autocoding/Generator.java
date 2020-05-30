@@ -202,7 +202,7 @@ public class Generator {
 //		map.put("item_spec_value", "商品规格值");
 //		map.put("sku", "商品sku");
 //		map.put("stock", "库存信息表");
-		map.put("stock_record", "库存出入库记录/库存流水");
+//		map.put("stock_record", "库存出入库记录/库存流水");
 
 		// homecenter
 //		map.put("mall_banner", "轮播图");
@@ -215,7 +215,12 @@ public class Generator {
 //		map.put("order_item_discount", "订单商品活动");
 //		map.put("orders", "订单");
 //		map.put("pay_log", "");
-//		map.put("shop_freight_template", "运费模板,商品所在地到配送地址所在地区");
+//		map.put("freight_template", "运费模板,商品所在地到配送地址所在地区");
+		map.put("freight_standard", "运费模版的运费计算标准");
+		map.put("aftersale", "售后单");
+		map.put("aftersale_express", "售后退款退货-换货(买家将商品退给卖家时的退货信息)");
+		map.put("aftersale_item", "售后商品");
+		map.put("aftersale_record", "售后流水记录");
 
 		// promotioncenter
 //		map.put("coupon", "优惠券");
