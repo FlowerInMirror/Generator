@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 /**
- * Description: [${table.tableDesc}服务]
+ * Description: [${table.tableDesc}接口]
  * Created on ${date}
  * @author  <a href="mailto: ${email}">${author}</a>
  * @version 1.0 
@@ -25,8 +25,8 @@ public class ${className}Controller {
     @Resource
     private ${className}Service ${classNameLower}Service;
 
-    @PostMapping("buyerAdd")
-    public ResponseBody<Boolean> buyerAdd(@RequestBody Long id) {
+    @PostMapping("add")
+    public ResponseBody<Boolean> add(@RequestBody Long id) {
         try {
             return ResponseBody.ok(true);
         } catch (Exception e) {
