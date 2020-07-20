@@ -203,7 +203,7 @@ public class Generator {
 //		map.put("sku", "商品sku");
 //		map.put("stock", "库存信息表");
 //		map.put("stock_record", "库存出入库记录/库存流水");
-		map.put("item_evaluate_reply", "买家与卖家之间对于买家初始评论的回复");
+//		map.put("item_evaluate_reply", "买家与卖家之间对于买家初始评论的回复");
 
 		// homecenter
 //		map.put("mall_banner", "轮播图");
@@ -214,6 +214,7 @@ public class Generator {
 		// tradecenter
 //		map.put("order_item", "订单商品表");
 //		map.put("order_item_discount", "订单商品活动");
+		map.put("order_item_express", "订单商品物流信息");
 //		map.put("orders", "订单");
 //		map.put("pay_log", "");
 //		map.put("freight_template", "运费模板,商品所在地到配送地址所在地区");
